@@ -129,11 +129,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "https://wilmygonzalez.github.io/portfolio/",
-            "name": "Wilmy González",
-            "email": "wilmygnz@gmail.com"
-          }
+          "options": {}
         }
       }
     }
