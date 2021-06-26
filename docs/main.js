@@ -55,8 +55,7 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_modules_home_home_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./modules/home/home.module */ 4882)).then(m => m.HomeModule)
             }
         ]
-    },
-    { path: '**', redirectTo: '/home', pathMatch: 'full' }
+    }
 ];
 class AppRoutingModule {
 }

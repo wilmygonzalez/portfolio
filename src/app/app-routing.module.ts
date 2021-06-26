@@ -19,8 +19,7 @@ const routes: Routes = [
             import('./modules/home/home.module').then(m => m.HomeModule)
         }
       ]
-  },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  }
 ];
 
 @NgModule({
