@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portfolio-777f2": {
+      "hosting": {
+        "WilmyPortfolio": [
+          "portfolio-777f2"
+        ]
+      }
+    }
+  }
+}

@@ -2,3 +2,62 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "tailwindcss/screens";
+
+/* FORM */
+input[type=text],input[type=number],textarea, select{
+    @apply mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md;
+}
+
+textarea[type=text]{
+    @apply shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md;
+}
+
+label{
+    @apply block text-sm font-medium text-gray-700;
+}
+/* FORM */
+
+
+
+/* BUTTONS */
+.btn{
+    @apply font-bold uppercase border-2 px-4 py-2 m-2 transition duration-300 ease-in-out select-none focus:outline-none hover:shadow-lg
+}
+.btn-green{
+    @apply btn text-white bg-green-500 border-green-500 hover:bg-green-700 hover:border-green-700; 
+}
+.btn-red{
+    @apply btn text-white bg-red-500 border-red-500 hover:bg-red-700 hover:border-red-700; 
+}
+
+.btn-outline-gray{
+    @apply btn text-gray-400 border-gray-400 hover:text-white hover:bg-gray-400;
+}
+
+.btn-outline-gray{
+    @apply btn text-gray-400 border-gray-400 hover:text-white hover:bg-gray-400;
+}
+/* BUTTONS *
+
+
+
+/* ICONS */
+.icon{
+    @apply border-2 py-1 px-2 focus:outline-none hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+}
+.icon-red{
+    @apply icon text-white border-red-500 bg-red-500 text-white cursor-pointer hover:bg-red-600 hover:border-red-600;
+}
+.icon-outline-red{
+    @apply icon text-red-500 border-solid border-red-500 hover:border-red-600;
+}
+/* ICONS */
+
+
+
+
+/* MODAL */
+.modal-footer{
+    @apply px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse;
+}
+/* MODAL */

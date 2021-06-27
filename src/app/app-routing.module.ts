@@ -5,11 +5,6 @@ import { ContentComponent } from './layout/content/content.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
     component: ContentComponent,
     children:
       [
@@ -19,6 +14,11 @@ const routes: Routes = [
             import('./modules/home/home.module').then(m => m.HomeModule)
         }
       ]
+  },
+  {
+    path: 'shop',
+    loadChildren: () =>
+      import('./modules/shop/shop.module').then(m => m.ShopModule)
   },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
