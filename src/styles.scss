@@ -21,7 +21,7 @@ label{
 
 /* BUTTONS */
 .btn{
-    @apply font-bold uppercase border-2 px-4 py-2 m-2 transition duration-300 ease-in-out select-none focus:outline-none hover:shadow-lg
+    @apply font-bold uppercase border-2 px-4 py-2 transition duration-300 ease-in-out select-none focus:outline-none hover:shadow-lg
 }
 
 .btn-gray{
@@ -100,15 +100,15 @@ label{
     @apply fixed z-10 inset-0 overflow-y-auto opacity-0 ease-in duration-200;
 }
 .modal{
-    @apply flex items-end justify-center pt-4 px-4 pb-20 text-center sm:px-4 sm:block sm:p-0;
+    @apply flex items-center min-h-screen p-4 bg-gray-100 justify-center;
 }
 .modal-content{
-    @apply inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle;
+    @apply w-full overflow-hidden bg-white rounded-md shadow-lg;
 }
 .modal-title{
-    @apply px-4 pt-3 pb-3 flex justify-between font-medium;
+    @apply px-4 py-3 flex justify-between font-medium;
 }
 .modal-footer{
-    @apply px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse;
+    @apply flex flex-wrap p-4 space-y-1.5 sm:space-y-0 sm:space-x-3 sm:justify-end bg-gray-50;
 }
 /* MODAL */

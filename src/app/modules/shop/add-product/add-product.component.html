@@ -1,26 +1,22 @@
 <div id="modalOverlay" class="close-modal">
     <div class="modal">
-        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-        </div>
-        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-        <div class="modal-content">
+        <div class="modal-content sm:w-auto">
             <form [formGroup]="productForm" (ngSubmit)="addProduct()">
-                <div class="modal-title bg-green-500 text-white">
+                <div class="p-4 flex justify-between font-medium bg-green-500 text-white">
                     <h4>New Product</h4>
                     <button (click)="close()" type="button" class="focus:outline-none">
                         <fa-icon [icon]="['fas', 'times']" size="md"></fa-icon>
                     </button>
                 </div>
 
-                <div class="grid grid-cols-6 gap-6">
+                <div class="grid grid-cols-6 gap-6 p-4">
                     <div class="col-span-6 sm:col-span-3">
                         <label for="name">Name:</label>
                         <input formControlName="name" id="name" type="text" />
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <label for="category">Category</label>
+                        <label for="category">Category:</label>
                         <select id="category" name="category">
                             <option>Cars</option>
                             <option>Mobiles</option>
@@ -44,14 +40,15 @@
                     </div>
                 </div>
 
-                <div class="modal-footer bg-gray-50">
-                    <button class="btn-green rounded-md text-sm" type="submit" role="button">
-                        <fa-icon [icon]="['fas', 'save']" class="mr-1" size="lg"></fa-icon>
-                        Save Product
-                    </button>
-                    <button (click)="close()" class="btn-outline-gray text-sm rounded-md" type="button">
+                <div class="modal-footer">
+                    <button (click)="close()" class="btn-outline-gray rounded-md text-sm w-full sm:w-auto" type="button">
                         Cancel
                     </button>
+                    <button class="btn-green rounded-md text-sm w-full sm:w-auto" type="submit" role="button">
+                        <fa-icon [icon]="['fas', 'save']" size="lg"></fa-icon>
+                        Save Product
+                    </button>
+                    
                 </div>
             </form>
         </div>
