@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ModalService } from 'src/app/core/services/modal.service';
 import { ShopService } from 'src/app/core/services/shop.service';
 
 @Component({
@@ -10,7 +11,9 @@ export class AddProductComponent implements OnInit {
 
   productForm: FormGroup;
 
-  constructor(private _shopService: ShopService) { }
+  constructor(
+    private _shopService: ShopService,
+    private _modalService: ModalService) { }
 
   ngOnInit(): void {
     this.initializeFormGroup();
@@ -24,15 +27,19 @@ export class AddProductComponent implements OnInit {
       price: new FormControl(0, Validators.required),
       discount: new FormControl(0, [Validators.required, Validators.min(0), Validators.max(100)]),
       imageUrl: new FormControl(null)
-    })
+    });
   }
 
   addProduct() {
     this._shopService.addProduct(this.productForm.value)
       .then(() => {
-        console.log("succesfull");
+        console.log("sucessfull");
       })
-      .catch(err => console.log("error"));
+      .catch(err => console.log(err));
+  }
+
+  close(){
+    this._modalService.close();
   }
 
 }

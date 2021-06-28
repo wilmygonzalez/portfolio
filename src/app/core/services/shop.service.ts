@@ -6,9 +6,7 @@ import { map } from 'rxjs/operators';
 import { ShopModule } from 'src/app/modules/shop/shop.module';
 import { Product } from '../models/product';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ShopService {
 
   constructor(private _firestore: AngularFirestore) { }

@@ -6,6 +6,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { ModalService } from '../core/services/modal.service';
 
 
 
@@ -19,6 +20,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
   exports: [
     FontAwesomeModule,
     ReactiveFormsModule
+  ],
+  providers:[
+    ModalService
   ]
 })
 export class SharedModule {
